@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Repro Step
+
+```
+yarn
+yarn build
+yarn start
+```
+
+Visit localhost:3000
+
+navigate to `page1` using the link in the page,
+navigate to `home` using the link in the page.
+
+It should raise an error because `appContext.ctx.req` is undefined.
 
 ## Getting Started
 

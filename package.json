@@ -8,7 +8,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "12.0.7",
+    "axios": "^0.24.0",
+    "axios-case-converter": "^0.9.0",
+    "next": "11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
