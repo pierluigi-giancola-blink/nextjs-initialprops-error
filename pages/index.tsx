@@ -23,10 +23,12 @@ const Home: NextPage = (props) => {
         <Link href="/page1">
           <a>Page 1</a>
         </Link>
-        <Link href="/page1">
+        <Link href="/page2">
           <a>Page 2</a>
         </Link>
-
+        <Link href="/page3">
+          <a>Page 3</a>
+        </Link>
         <p className={styles.description}>
           Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>

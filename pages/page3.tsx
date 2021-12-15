@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 import { axiosInstance } from "../utils/axios";
 
 const Home: NextPage = ({ types, pkmn, host }: any) => {
-  console.log("PAGE1", host);
+  console.log("PAGE3", host);
   return (
     <div className={styles.container}>
       <Head>
@@ -15,17 +15,17 @@ const Home: NextPage = ({ types, pkmn, host }: any) => {
       </Head>
 
       <main className={styles.main}>
-        PAGE 1<div>{JSON.stringify(types)}</div>
+        PAGE 3<div>{JSON.stringify(types)}</div>
         <Link href="/">
           <a>Home</a>
+        </Link>
+        <Link href="/page1">
+          <a>Page 1</a>
         </Link>
         <Link href="/page2">
           <a>Page 2</a>
         </Link>
-        <Link href="/page3">
-          <a>Page 3</a>
-        </Link>
-        <div>PKMN: {pkmn.name}</div>
+        <div>PKMN: {pkmn?.name}</div>
       </main>
 
       <footer className={styles.footer}>
@@ -45,13 +45,8 @@ const Home: NextPage = ({ types, pkmn, host }: any) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon/1");
-  console.log(context.req?.headers.host);
-  const { data } = await axiosInstance("https://pokeapi.co/api/v2/type");
-  const typesList = data.results.map((i: { name: string }) => i.name);
-  const pkmn1 = await res.json();
   return {
-    props: { pkmn: pkmn1, types: typesList },
+    props: {},
   };
 };
 

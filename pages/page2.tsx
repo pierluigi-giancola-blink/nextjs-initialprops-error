@@ -24,7 +24,10 @@ const Home: NextPage = ({ types, pkmn, host }: any) => {
         <Link href="/page1">
           <a>Page 1</a>
         </Link>
-        <div>PKMN: {pkmn.name}</div>
+        <Link href="/page3">
+          <a>Page 3</a>
+        </Link>
+        <div>PKMN: {pkmn?.name}</div>
       </main>
 
       <footer className={styles.footer}>
