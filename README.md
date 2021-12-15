@@ -9,9 +9,17 @@ yarn start
 Visit localhost:3000
 
 navigate to `page1` using the link in the page,
-navigate to `home` using the link in the page.
 
-It should raise an error because `appContext.ctx.req` is undefined.
+It works fine
+
+navigate to `page2` using the link in the page,
+
+The page break. The page 2 doesn't declare getServerSideProps.
+If you try to navigate back using the Browser back the application stay broken. If you refresh the page it loads correctly.
+
+navigate to `page3` using the link in the page.
+
+The page work. The page 3 has an empty getServerSideProps declared and it doesn't break
 
 ## Getting Started
 
