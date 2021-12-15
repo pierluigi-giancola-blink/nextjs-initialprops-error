@@ -43,15 +43,4 @@ const Home: NextPage = ({ types, pkmn, host }: any) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon/2");
-  console.log(context.req?.headers.host);
-  const { data } = await axiosInstance("https://pokeapi.co/api/v2/type");
-  const typesList = data.results.map((i: { name: string }) => i.name);
-  const pkmn2 = await res.json();
-  return {
-    props: { pkmn: pkmn2, types: typesList },
-  };
-};
-
 export default Home;
